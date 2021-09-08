@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+h1, #footer{
+    margin: 20px 0px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+#location{
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+}
+input[type=text]{
+    width: 40%;
+    height: 30px;
+}
+select{
+    height: 30px;
+    width: 40%;
+}
+button{
+    margin-top: 15px;
+    padding: 5px 10px;
+    background-color: white;
+    cursor: pointer;
+}
+body{
+    background-color: #ff6e42;
+}
+table{
+    background-color: white;
+    margin: 0 auto;
+    
+}
+td, th{
+    border-bottom: 1px black solid;
+    padding: 3px;
+    
+    width: 100px;
+}
+td:nth-child(even), th:nth-child(even){
+    background-color: lightgrey;
+    
+}
+tr:last-child td{
+    border-bottom: none !important;
+}
+tr th:first-child{
+    border: none;
+}
+@media only screen and (min-width: 400px) and (max-width: 631px) {
+    img{
+        width: 63px;
+        height: 63px;
+    }
+    table{
+        width: 390px;
+    }
+    td, th{
+        width: 50px;
+        font-size: .5rem;
+    }
+}
+@media only screen and (min-width: 375px) and (max-width: 400px) {
+    img{
+        width: 56px;
+        height: 56px;
+    }
+    table{
+        width: 350px
+    }
+    td, th{
+        width: 40px;
+        font-size: .5rem;
+    }
+}

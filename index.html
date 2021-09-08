@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5 Day Forcast</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>5 Day Weather Forcast</h1>
+    <div id="location">
+        <input type="text" id="city" placeholder="Enter City, State, Providence, etc.">
+        <select name="country" id="country">
+        <option value="af">Afghanistan AF</option>
+        <option value="ax">Aland Islands AX</option>
+        <option value="al">Albania AL</option>
+        <option value="dz">Algeria DZ</option>
+        <option value="as">American Samoa AS</option>
+        <option value="ad">Andorra AD</option>
+        <option value="ao">Angola AO</option>
+        <option value="ai">Anguilla AI</option>
+        <option value="aq">Antarctica AQ</option>
+        <option value="ag">Antigua and Barbuda AG</option>
+        <option value="ar">Argentina AR</option>
+        <option value="am">Armenia AM </option>
+        <option value="aw">Aruba AW</option>
+        <option value="au">Australia AU</option>
+        <option value="at">Austria AT</option>
+        <option value="az">Azerbaijan AZ</option>
+
+        <option value="bs">Bahamas BS</option>
+        <option value="bh">Bahrain BH</option>
+        <option value="bd">Bangladesh BD</option>
+        <option value="bb">Barbados BB</option>
+        <option value="by">Belarus BY</option>
+        <option value="be">Belgium BE</option>
+        <option value="bz">Belize BZ </option>
+        <option value="bj">Benin BJ</option>
+        <option value="bm">Bermuda BM</option>
+        <option value="bt">Bhutan BT</option>
+        <option value="bo">Bolivia BO</option>
+        <option value="ba">Bosnia and Herzegovina BA</option>
+        <option value="bw">Botswana BW</option>
+        <option value="bv">Bouvet Island BV</option>
+        <option value="br">Brazil BR</option>
+        <option value="vg">British Virgin Islands VG</option>
+        <option value="io">British Indian Ocean Territory IO</option>
+        <option value="bn">Brunei Darussalam BN</option>
+        <option value="bg">Bulgaria BG</option>
+        <option value="bf">Burkina Faso BF</option>
+        <option value="bi">Burundi BI</option>
+
+        <option value="kh">Cambodia KH</option>
+        <option value="cm">Cameroon CM</option>
+        <option value="ca">Canada CA</option>
+        <option value="cv">Cape Verde CV</option>
+        <option value="ky">Cayman Islands KY</option>
+        <option value="cf">Central African Republic CF</option>
+        <option value="td">Chad TD</option>
+        <option value="cl">Chile CL</option>
+        <option value="cn">China CN</option>
+        <option value="hk">Hong Kong, SAR China HK</option>
+        <option value="mo">Macao, SAR China MO</option>
+        <option value="cx">Christmas Island CX</option>
+        <option value="cc">Cocos (Keeling) Islands CC</option>
+        <option value="co">Colombia CO</option>
+        <option value="km">Comoros KM</option>
+        <option value="cg">Congo (Brazzaville) CG</option>
+        <option value="cd">Congo, (Kinshasa) CD</option>
+        <option value="ck">Cook Islands CK</option>
+        <option value="cr">Costa Rica CR</option>
+        <option value="ci">Côte d'Ivoire CI</option>
+        <option value="hr">Croatia HR</option>
+        <option value="cu">Cuba CU</option>
+        <option value="cy">Cyprus CY</option>
+        <option value="cz">Czech Republic CZ</option>
+
+        <option value="dk">Denmark DK</option>
+        <option value="dj">Djibouti DJ</option>
+        <option value="dm">Dominica DM</option>
+        <option value="do">Dominican Republic DO</option>
+
+        <option value="ec">Ecuador EC</option>
+        <option value="eg">Egypt EG</option>
+        <option value="sv">El Salvador SV</option>
+        <option value="gq">Equatorial Guinea GQ</option>
+        <option value="er">Eritrea ER</option>
+        <option value="ee">Estonia EE</option>
+        <option value="et">Ethiopia ET</option>
+
+        <option value="fk">Falkland Islands (Malvinas) FK</option>
+        <option value="fo">Faroe Islands FO</option>
+        <option value="fj">Fiji FJ</option>
+        <option value="fi">Finland FI</option>
+        <option value="fr">France FR</option>
+        <option value="gf">French Guiana GF</option>
+        <option value="pf">French Polynesia PF</option>
+        <option value="tf">French Southern Territories TF</option>
+
+        <option value="ga">Gabon GA</option>
+        <option value="gm">Gambia GM</option>
+        <option value="ge">Georgia GE</option>
+        <option value="de">Germany DE</option>
+        <option value="gh">Ghana GH</option>
+        <option value="gi">Gibraltar GI</option>
+        <option value="gr">Greece GR</option>
+        <option value="gl">Greenland GL</option>
+        <option value="gd">Grenada GD</option>
+        <option value="gp">Guadeloupe GP</option>
+        <option value="gu">Guam GU</option>
+        <option value="gt">Guatemala GT</option>
+        <option value="gg">Guernsey GG</option>
+        <option value="gn">Guinea GN</option>
+        <option value="gw">Guinea-Bissau GW</option>
+        <option value="gy">Guyana GY</option>
+
+        <option value="ht">Haiti HT</option>
+        <option value="hm">Heard and Mcdonald Islands HM</option>
+        <option value="va">Holy See (Vatican City State) VA</option>
+        <option value="hn">Honduras HN</option>
+        <option value="hu">Hungary HU</option>
+
+        <option value="is">Iceland IS</option>
+        <option value="in">India IN</option>
+        <option value="id">Indonesia ID</option>
+        <option value="if">Iran, Islamic Republic of IR</option>
+        <option value="iq">Iraq IQ</option>
+        <option value="ie">Ireland IE</option>
+        <option value="im">Isle of Man IM</option>
+        <option value="il">Israel IL</option>
+        <option value="it">Italy IT</option>
+
+        <option value="jm">Jamaica JM</option>
+        <option value="jp">Japan JP</option>
+        <option value="je">Jersey JE</option>
+        <option value="jo">Jordan JO</option>
+
+        <option value="kz">Kazakhstan KZ</option>
+        <option value="ke">Kenya KE</option>
+        <option value="ki">Kiribati KI </option>
+        <option value="kp">Korea (North) KP</option>
+        <option value="kr">Korea (South) KR</option>
+        <option value="kw">Kuwait KW</option>
+        <option value="kg">Kyrgyzstan KG</option>
+
+        <option value="la">Lao PDR LA</option>
+        <option value="lv">Latvia LV</option>
+        <option value="lb">Lebanon LB</option>
+        <option value="ls">Lesotho LS</option>
+        <option value="lr">Liberia LR</option>
+        <option value="ly">Libya LY</option>
+        <option value="li">Liechtenstein LI</option>
+        <option value="lt">Lithuania LT</option>
+        <option value="lu">Luxembourg LU</option>
+
+        <option value="mk">Macedonia, Republic of MK</option>
+        <option value="mg">Madagascar MG</option>
+        <option value="mw">Malawi MW</option>
+        <option value="my">Malaysia MY</option>
+        <option value="mv">Maldives MV</option>
+        <option value="ml">Mali ML</option>
+        <option value="mt">Malta MT</option>
+        <option value="mh">Marshall Islands MH</option>
+        <option value="mq">Martinique MQ</option>
+        <option value="mr">Mauritania MR</option>
+        <option value="mu">Mauritius MU</option>
+        <option value="yt">Mayotte YT</option>
+        <option value="mx">Mexico MX</option>
+        <option value="fm">Micronesia, Federated States of FM</option>
+        <option value="md">Moldova MD</option>
+        <option value="mc">Monaco MC</option>
+        <option value="mn">Mongolia MN</option>
+        <option value="me">Montenegro ME</option>
+        <option value="ms">Montserrat MS</option>
+        <option value="ma">Morocco MA</option>
+        <option value="mz">Mozambique MZ</option>
+        <option value="mm">Myanmar MM</option>
+
+        <option value="na">Namibia NA</option>
+        <option value="nr">Nauru NR</option>
+        <option value="np">Nepal NP</option>
+        <option value="nl">Netherlands NL</option>
+        <option value="an">Netherlands Antilles AN</option>
+        <option value="nc">New Caledonia NC</option>
+        <option value="nz">New Zealand NZ</option>
+        <option value="ni">Nicaragua NI</option>
+        <option value="ne">Niger NE</option>
+        <option value="ng">Nigeria NG</option>
+        <option value="nu">Niue NU</option>
+        <option value="nf">Norfolk Island NF</option>
+        <option value="mp">Northern Mariana Islands MP</option>
+        <option value="no">Norway NO</option>
+
+        <option value="om">Oman OM</option>
+        
+        <option value="pk">Pakistan PK</option>
+        <option value="pw">Palau PW</option>
+        <option value="ps">Palestinian Territory PS</option>
+        <option value="pa">Panama PA</option>
+        <option value="pg">Papua New Guinea PG</option>
+        <option value="py">Paraguay PY</option>
+        <option value="pe">Peru PE</option>
+        <option value="ph">Philippines PH</option>
+        <option value="pn">Pitcairn PN</option>
+        <option value="pl">Poland PL</option>
+        <option value="pt">Portugal PT</option>
+        <option value="pr">Puerto Rico PR</option>
+
+        <option value="qa">Qatar QA</option>
+        
+        <option value="re">Réunion RE</option>
+        <option value="ro">Romania RO</option>
+        <option value="ru">Russian Federation RU</option>
+        <option value="rw">Rwanda RW</option>
+
+        <option value="bl">Saint-Barthélemy BL</option>
+        <option value="sh">Saint Helena SH</option>
+        <option value="kn">Saint Kitts and Nevis KN</option>
+        <option value="lc">Saint Lucia LC</option>
+        <option value="mf">Saint-Martin (French part) MF</option>
+        <option value="pm">Saint Pierre and Miquelon PM</option>
+        <option value="vc">Saint Vincent and Grenadines VC</option>
+        <option value="ws">Samoa WS</option>
+        <option value="sm">San Marino SM</option>
+        <option value="st">Sao Tome and Principe ST</option>
+        <option value="sa">Saudi Arabia SA</option>
+        <option value="sn">Senegal SN</option>
+        <option value="rs">Serbia RS</option>
+        <option value="sc">Seychelles SC</option>
+        <option value="sl">Sierra Leone SL</option>
+        <option value="sg">Singapore SG</option>
+        <option value="sk">Slovakia SK</option>
+        <option value="si">Slovenia SI</option>
+        <option value="sb">Solomon Islands SB</option>
+        <option value="so">Somalia SO</option>
+        <option value="za">South Africa ZA</option>
+        <option value="gs">South Georgia and the South Sandwich Islands GS</option>
+        <option value="ss">South Sudan SS</option>
+        <option value="es">Spain ES</option>
+        <option value="lk">Sri Lanka LK</option>
+        <option value="sd">Sudan SD</option>
+        <option value="sr">Suriname SR</option>
+        <option value="sj">Svalbard and Jan Mayen Islands SJ</option>
+        <option value="sz">Swaziland SZ</option>
+        <option value="se">Sweden SE</option>
+        <option value="ch">Switzerland CH</option>
+        <option value="sy">Syrian Arab Republic (Syria) SY</option>
+
+        <option value="tw">Taiwan, Republic of China TW</option>
+        <option value="tj">Tajikistan TJ</option>
+        <option value="tz">Tanzania, United Republic of TZ</option>
+        <option value="th">Thailand TH</option>
+        <option value="tl">Timor-Leste TL</option>
+        <option value="tg">Togo TG</option>
+        <option value="tk">Tokelau TK</option>
+        <option value="to">Tonga TO</option>
+        <option value="tt">Trinidad and Tobago TT</option>
+        <option value="tn">Tunisia TN</option>
+        <option value="tr">Turkey TR</option>
+        <option value="tm">Turkmenistan TM</option>
+        <option value="tc">Turks and Caicos Islands TC</option>
+        <option value="tv">Tuvalu TV</option>
+
+        <option value="ug">Uganda UG</option>
+        <option value="ua">Ukraine UA</option>
+        <option value="ae">United Arab Emirates AE</option>
+        <option value="gb">United Kingdom GB</option>
+        <option value="us">United States of America US</option>
+        <option value="um">US Minor Outlying Islands UM</option>
+        <option value="uy">Uruguay UY</option>
+        <option value="uz">Uzbekistan UZ</option>
+
+        <option value="vu">Vanuatu VU</option>
+        <option value="ve">Venezuela (Bolivarian Republic) VE</option>
+        <option value="vn">Viet Nam VN</option>
+        <option value="vi">Virgin Islands, US VI</option>
+
+        <option value="wf">Wallis and Futuna Islands WF</option>
+        <option value="eh">Western Sahara EH</option>
+
+        <option value="ye">Yemen YE</option>
+        <option value="zm">Zambia ZM</option>
+        <option value="zw">Zimbabwe ZW</option>
+    </select>
+    <button id="button">Get Forecast</button>
+    </div>
+ 
+    
+    
+
+    <h1 id="feedback"></h1>
+<table id="forcast" cellspacing="0">
+    <thead>
+        <tr id="dates">
+            <th></th>
+            <th>Day 1</th>
+            <th>Day 2</th>
+            <th>Day 3</th>
+            <th>Day 4</th>
+            <th>Day 5</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr id="icons">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="conditions">
+            <td>Condition</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="temperatures">
+            <td>High/Low</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="windspeeds">
+            <td>Wind Speed</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="winddirections">
+            <td>Wind Direction</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+
+<div id="footer">
+    <p>Site created by Ryan Park &copy; 2021.  API provided by Open Weather Map</p>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
